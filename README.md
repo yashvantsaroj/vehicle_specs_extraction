@@ -155,7 +155,7 @@ data/service_manual.pdf
 Create `.env` file:
 
 ```
-OPENAI_API_KEY=your_api_key_here
+GOOGLE_API_KEY=your_api_key_here
 ```
 
 ---
@@ -169,7 +169,6 @@ python run_pipeline.py
 This performs:
 
 * PDF Extraction
-* Cleaning
 * Chunking
 * Embedding
 * Vector Index Building
@@ -237,10 +236,10 @@ Below is the step-by-step pipeline followed:
 | Component     | Technology                                      |
 | ------------- | ----------------------------------------------- |
 | PDF Parser    | PyMuPDF                                         |
-| Text Cleaning | Python + Regex                                  |
+| Text Cleaning | Python                                   |
 | Embeddings    | SentenceTransformers (MiniLM-L6-v2)             |
 | Vector Store  | FAISS CPU                                       |
-| LLM           | OpenAI GPT-4o-mini (or any GPT-4 capable model) |
+| LLM           | gemini-2.5-flash                                |
 | Output        | JSON                                            |
 
 ---
@@ -290,22 +289,6 @@ These can be mentioned during your interview:
 
 ---
 
-# 🎉 **10. Conclusion**
 
-This project provides a production-ready RAG pipeline capable of extracting technical automotive specifications from large, complex PDFs.
-It is modular, cleanly structured, and fulfills all assignment evaluation criteria:
 
-* ✔ Concept Understanding
-* ✔ Pipeline Design
-* ✔ Code Clarity
-* ✔ Output Quality
-* ✔ Creativity Extensions
 
-If you'd like, I can also generate:
-
-✨ Architecture diagram image
-✨ Streamlit UI code
-✨ OCR integration
-✨ End-to-end video explanation
-
-Just tell me **“Add UI”** or **“Add OCR”** or **“Explain code step-by-step”**.
